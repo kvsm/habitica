@@ -16,6 +16,15 @@ function($rootScope, User, $http, Content) {
     GIFT: 'Gift'
   };
 
+  Payments.paymentMethods = {
+    AMAZON_PAYMENTS: 'Amazon Payments',
+    STRIPE: 'Stripe',
+    GOOGLE: 'Google',
+    APPLE: 'Apple',
+    PAYPAL: 'Paypal',
+    GIFT: 'Gift'
+  };
+
   window.onAmazonLoginReady = function(){
     isAmazonReady = true;
     amazon.Login.setClientId(window.env.AMAZON_PAYMENTS.CLIENT_ID);

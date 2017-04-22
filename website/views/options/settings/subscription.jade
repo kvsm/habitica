@@ -28,13 +28,8 @@ script(id='partials/options.settings.subscription.html',type='text/ng-template',
               li #{env.t('gemCapExtra')} {{user.purchased.plan.consecutive.gemCapExtra}}
               li #{env.t('mysticHourglasses')} {{user.purchased.plan.consecutive.trinkets}}
 
-<<<<<<< aeb8d4f500c0326cfd11a0b20e20f57bc5c4b7ae
         div(ng-if='!hasSubscription(user) || hasCanceledSubscription(user)')
           h4(ng-if='hasCanceledSubscription(user)')= env.t("resubscribe")
-=======
-        div(ng-if='!user.purchased.plan.customerId || (user.purchased.plan.customerId && user.purchased.plan.dateTerminated)')
-          h4(ng-if='(user.purchased.plan.customerId && user.purchased.plan.dateTerminated)')= env.t("resubscribe")
->>>>>>> Removed cancel sub button and added info for apple/google subs
           .form-group.reduce-top-margin
             .radio(ng-repeat='block in Content.subscriptionBlocks | toArray | omit: "discount==true" | orderBy:"months"', ng-if="block.target !== 'group' && block.canSubscribe === true")
               label
